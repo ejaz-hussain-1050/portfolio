@@ -1,4 +1,4 @@
-import { Code, Server, Database, Brain, Cloud, ExternalLink, GitBranch, Linkedin, Github, Mail, Phone, MapPin } from "lucide-react";
+import { Code, Server, Database, Brain, Cloud } from "lucide-react";
 
 export interface Project {
   id: string;
@@ -28,12 +28,21 @@ export interface Skill {
   icon?: any;
 }
 
+export interface Education {
+  id: string;
+  degree: string;
+  institution: string;
+  period: string;
+  description: string;
+}
+
+// Default/fallback data - used on client-side and as fallback on server
 export const projects: Project[] = [
   {
     id: "fitcoin",
     title: "Fitcoin",
     description: "A blockchain-based fitness application that rewards users with cryptocurrency for their physical activity. Features real-time tracking and wallet integration.",
-    techStack: ["React Native","React", "Solidity", "Node.js", "Web3.js"],
+    techStack: ["React Native", "Solidity", "Node.js", "Web3.js"],
     liveUrl: "#",
     githubUrl: "#",
     imageUrl: "/projects/fitcoin.jpg",
