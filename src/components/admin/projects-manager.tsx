@@ -217,7 +217,7 @@ export function ProjectsManager() {
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-2">
-                {project.techStack?.map((tech: string, i: number) => (
+                {project.techStack?.map((tech: string) => (
                   <Badge key={tech} variant="secondary">{tech}</Badge>
                 ))}
               </div>
