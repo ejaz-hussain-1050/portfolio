@@ -18,12 +18,14 @@ Navigate to: **http://localhost:3002/admin**
 - ✅ Set project category (Web, Mobile, AI, Full Stack)
 - ✅ Add tech stack tags
 - ✅ Set live URL and GitHub URL
+- ✅ **Upload project images** (supports JPG, PNG, GIF, WebP)
 
 ### Experience Management
 - ✅ Add work experience entries
 - ✅ Edit company, position, and period
 - ✅ Add multiple achievements (one per line)
 - ✅ Delete experience entries
+- ✅ **Upload company logos** (supports JPG, PNG, GIF, WebP)
 
 ### Skills Management
 - ✅ Add/remove skills
@@ -41,6 +43,23 @@ Navigate to: **http://localhost:3002/admin**
 All changes are saved to `data/portfolio-data.json` and will persist across server restarts.
 
 The main portfolio page reads from this JSON file, so changes in the admin panel will immediately reflect on the public site after a page refresh.
+
+## 📸 Image Uploads
+
+Images are stored in the `public/uploads` directory:
+- **Project images**: `public/uploads/projects/`
+- **Company logos**: `public/uploads/companies/`
+
+Supported formats: JPG, PNG, GIF, WebP
+
+When you upload an image:
+1. The file is saved to the appropriate directory
+2. A unique filename is generated (timestamp-based)
+3. The URL is automatically saved to your project/experience data
+4. Images are immediately available on the public site
+
+> [!NOTE]
+> Uploaded images are stored locally. For production, consider using a cloud storage service like AWS S3, Cloudinary, or Vercel Blob.
 
 ## 🔒 Security Notes
 

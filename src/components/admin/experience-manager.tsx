@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Plus, Edit, Trash2, Save } from "lucide-react"
 import { Label } from "@/components/ui/label"
+import { ImageUpload } from "./image-upload"
 
 export function ExperienceManager() {
   const [experiences, setExperiences] = useState<any[]>([])
@@ -104,6 +105,13 @@ export function ExperienceManager() {
                 placeholder="2023 - Present"
               />
             </div>
+
+            <ImageUpload
+              currentImage={editing.logo}
+              onImageChange={(url) => setEditing({ ...editing, logo: url })}
+              type="company"
+              label="Company Logo"
+            />
 
             <div className="space-y-2">
               <Label>Description</Label>

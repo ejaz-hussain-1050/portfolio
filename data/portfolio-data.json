@@ -3,52 +3,128 @@
     {
       "id": "fitcoin",
       "title": "Fitcoin",
-      "description": "A blockchain-based fitness application that rewards users with cryptocurrency for their physical activity. Features real-time tracking and wallet integration.",
-      "techStack": ["React Native", "Solidity", "Node.js", "Web3.js"],
-      "liveUrl": "#",
+      "description": "Fitcoin® is a burn-to-earn fitness app that merges blockchain with real-time activity tracking to reward users with NFTs and ERC-20 tokens.\nI led the integration of live fitness data, timezone-specific leaderboards, blockchain contract listeners, and secure Web3 features.\nThe result is a fully responsive, cross-platform app that delivers gamified challenges, midnight rewards, and a transparent fitness experience.",
+      "techStack": [
+        "React Native",
+        "Solidity",
+        "Node.js",
+        "Web3.js",
+        "Reactjs",
+        "Stripe",
+        "Google Auth",
+        "Fitbit",
+        "NFTs",
+        "Web Sockets",
+        "Go Lang",
+        "Bootstrap"
+      ],
+      "liveUrl": "https://fitcoin-client.webflow.io/",
       "githubUrl": "#",
-      "imageUrl": "/projects/fitcoin.jpg",
-      "category": "mobile"
+      "imageUrl": "/uploads/projects/1764199368784.png",
+      "category": "fullstack"
     },
     {
       "id": "haggle-ai",
       "title": "Haggle AI",
-      "description": "An AI-powered Shopify integration that negotiates prices with customers in real-time, increasing conversion rates and customer engagement.",
-      "techStack": ["Next.js", "OpenAI API", "Shopify API", "Python"],
-      "liveUrl": "#",
+      "description": "Haggle is an AI-powered B2B2C negotiation engine for e-commerce, built with advanced NLP, dynamic pricing algorithms, and seamless integrations with Shopify, Stripe, and WooCommerce.\nI contributed to building the negotiation bot logic, merchant rule engine, analytics dashboard, and secure encrypted transaction flow with scalable SaaS architecture.\nThe platform enables personalized pricing, automated upsell/cross-sell, real-time insights, and high-conversion negotiation experiences that boost revenue and reduce cart abandonment.",
+      "techStack": [
+        "Next.js",
+        "OpenAI API",
+        "Shopify API",
+        "Python",
+        "Chatbot",
+        "LLMs",
+        "LangChain",
+        "Tailwindcss",
+        "Nestjs",
+        "Email",
+        "Twilio",
+        "Whatsapp APIs"
+      ],
+      "liveUrl": "https://www.omnicierge.ai/",
       "githubUrl": "#",
-      "imageUrl": "/projects/haggle.jpg",
+      "imageUrl": "/uploads/projects/1764203051448.png",
       "category": "ai"
     },
     {
       "id": "trofi-app",
       "title": "Trofi App",
       "description": "A restaurant discovery and mapping application helping users find the best local dining experiences with personalized recommendations.",
-      "techStack": ["React", "Google Maps API", "Firebase", "Tailwind"],
+      "techStack": [
+        "React",
+        "Google Maps API",
+        "Firebase",
+        "Tailwind",
+        "React Native",
+        "Android",
+        "IOS",
+        "Nodejs",
+        "React Native"
+      ],
       "liveUrl": "#",
       "githubUrl": "#",
-      "imageUrl": "/projects/trofi.jpg",
+      "imageUrl": "/uploads/projects/1764203173330.png",
       "category": "web"
     },
     {
       "id": "eateasy",
       "title": "EatEasy",
-      "description": "A comprehensive food delivery platform connecting customers with local home chefs and restaurants. Features real-time order tracking.",
-      "techStack": ["Flutter", "Node.js", "MongoDB", "Socket.io"],
+      "description": "Eateasy is a full-stack restaurant ordering platform offering real-time menu management, dynamic dish updates, and secure payment integrations through Paymob and Stripe.\nThe system features a powerful admin panel for managing restaurants, menus, orders, inventory, and customer interactions with complete CRUD operations.\nReal-time rider tracking, live order status updates, and map-based navigation are enabled through Firebase/Firestore, Node.js/Express, WebSockets, and React/Next.js for a seamless delivery experience.",
+      "techStack": [
+        "Nextjs",
+        "Nodejs",
+        "Tailwindcss",
+        "Shadcn UI",
+        "Nestjs",
+        "Postgres",
+        "Typeorm",
+        "Stripe",
+        "Paymob",
+        "Google Maps",
+        "Mapbox"
+      ],
       "liveUrl": "#",
       "githubUrl": "#",
-      "imageUrl": "/projects/eateasy.jpg",
+      "imageUrl": "/uploads/projects/1764205348636.png",
       "category": "fullstack"
     },
     {
       "id": "personality-pixie",
       "title": "Personality Pixie",
-      "description": "An AI-driven mobile app that analyzes user behavior to provide personality insights and daily affirmations.",
-      "techStack": ["React Native", "TensorFlow.js", "Express", "PostgreSQL"],
+      "description": "Personality Pixie analyzes users’ social media posts, comments, and interactions to generate deep personality insights using advanced LLMs.\nThe system securely aggregates multi-platform activity and applies NLP-driven behavioral profiling to identify traits, patterns, and communication styles.\nA clean dashboard presents sentiment, personality types, social tone, and engagement patterns, helping users understand and improve their digital identity.",
+      "techStack": [
+        "React Native",
+        "TensorFlow.js",
+        "Python",
+        "Flask Api",
+        "Android",
+        "IOS"
+      ],
       "liveUrl": "#",
       "githubUrl": "#",
       "imageUrl": "/projects/pixie.jpg",
-      "category": "ai"
+      "category": "fullstack"
+    },
+    {
+      "techStack": [
+        "Nestjs",
+        "Mongodb",
+        "Nodejs",
+        "Nextjs",
+        "Shadcn UI",
+        "Twilio",
+        "whatsapp/Email",
+        "Tailwindcss",
+        "Reactjs",
+        "Typeorm",
+        "Express"
+      ],
+      "category": "web",
+      "description": "Going Gone is a fully modernized online auction platform supporting competitive, sealed, cumulative, and buy-now bidding with deep customization for organizations.\nThe platform was revamped with a redesigned MongoDB schema, a Nest.js backend, and a high-performance Next.js 14 customer interface alongside a React-based admin portal.\nEnhanced features include VMS item imports, Stripe-based organizational payments, PIN authentication, SendGrid/Twilio communication tools, audit logs, and optimized performance for a seamless auction experience.",
+      "title": "Going Gone",
+      "liveUrl": "https://app.goinggone.io/",
+      "imageUrl": "/uploads/projects/1764204957100.png",
+      "id": "project-1764205022356"
     }
   ],
   "experiences": [
@@ -80,21 +156,53 @@
     }
   ],
   "skills": [
-    { "name": "Next.js / React", "level": 95, "category": "frontend" },
-    { "name": "TypeScript", "level": 90, "category": "frontend" },
-    { "name": "Tailwind CSS", "level": 95, "category": "frontend" },
-    { "name": "Node.js", "level": 85, "category": "backend" },
-    { "name": "Python / AI", "level": 80, "category": "ai" },
-    { "name": "PostgreSQL", "level": 85, "category": "backend" },
-    { "name": "AWS", "level": 75, "category": "tools" },
-    { "name": "Docker", "level": 80, "category": "tools" }
+    {
+      "name": "Next.js / React",
+      "level": 95,
+      "category": "frontend"
+    },
+    {
+      "name": "TypeScript",
+      "level": 90,
+      "category": "frontend"
+    },
+    {
+      "name": "Tailwind CSS",
+      "level": 95,
+      "category": "frontend"
+    },
+    {
+      "name": "Node.js",
+      "level": 85,
+      "category": "backend"
+    },
+    {
+      "name": "Python / AI",
+      "level": 80,
+      "category": "ai"
+    },
+    {
+      "name": "PostgreSQL",
+      "level": 85,
+      "category": "backend"
+    },
+    {
+      "name": "AWS",
+      "level": 75,
+      "category": "tools"
+    },
+    {
+      "name": "Docker",
+      "level": 80,
+      "category": "tools"
+    }
   ],
   "education": [
     {
       "id": "bsc-cs",
       "degree": "Bachelor of Science in Computer Science",
-      "institution": "University of Technology",
-      "period": "2019 - 2023",
+      "institution": "Quaid-e-Azam Univesrity, Islamabad",
+      "period": "2018 - 2022",
       "description": "Graduated with Honors. Specialized in Artificial Intelligence and Software Engineering. Led the university coding club and organized 3 hackathons."
     }
   ]

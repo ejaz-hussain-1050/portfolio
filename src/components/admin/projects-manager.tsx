@@ -1,13 +1,14 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Badge } from "@/components/ui/badge"
-import { Plus, Edit, Trash2, Save, X } from "lucide-react"
 import { Label } from "@/components/ui/label"
+import { Textarea } from "@/components/ui/textarea"
+import { Edit, Plus, Save, Trash2, X } from "lucide-react"
+import { useEffect, useState } from "react"
+import { ImageUpload } from "./image-upload"
 
 export function ProjectsManager() {
   const [projects, setProjects] = useState<any[]>([])
@@ -153,6 +154,13 @@ export function ProjectsManager() {
               </div>
             </div>
 
+            <ImageUpload
+              currentImage={editing.imageUrl}
+              onImageChange={(url) => setEditing({ ...editing, imageUrl: url })}
+              type="project"
+              label="Project Image"
+            />
+
             <div className="space-y-2">
               <Label>Tech Stack</Label>
               <div className="flex gap-2">
@@ -168,7 +176,7 @@ export function ProjectsManager() {
               </div>
               <div className="flex flex-wrap gap-2 mt-2">
                 {editing.techStack?.map((tech: string, i: number) => (
-                  <Badge key={i} variant="secondary" className="cursor-pointer" onClick={() => handleRemoveTech(i)}>
+                  <Badge key={tech} variant="secondary" className="cursor-pointer" onClick={() => handleRemoveTech(i)}>
                     {tech} <X className="w-3 h-3 ml-1" />
                   </Badge>
                 ))}
@@ -210,7 +218,7 @@ export function ProjectsManager() {
             <CardContent>
               <div className="flex flex-wrap gap-2">
                 {project.techStack?.map((tech: string, i: number) => (
-                  <Badge key={i} variant="secondary">{tech}</Badge>
+                  <Badge key={tech} variant="secondary">{tech}</Badge>
                 ))}
               </div>
             </CardContent>

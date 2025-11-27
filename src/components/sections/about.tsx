@@ -1,12 +1,12 @@
 "use client"
-
-import { motion } from "framer-motion"
-import { skills } from "@/lib/data"
-import { Progress } from "@/components/ui/progress"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Progress } from "@/components/ui/progress"
+import { Skill } from "@/lib/data"
+import { motion } from "framer-motion"
+import { Brain, Cloud, Code, Server } from "lucide-react"
 
-export function About() {
+
+export function About({ skills }: { skills: Skill[] }) {
   return (
     <section id="about" className="py-20 container mx-auto px-4">
       <motion.div
@@ -19,7 +19,7 @@ export function About() {
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Me</h2>
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            I'm a passionate developer with a knack for solving complex problems. 
+            I&apos;m a passionate developer with a knack for solving complex problems. 
             My journey bridges the gap between robust software engineering and innovative AI solutions.
           </p>
         </div>
@@ -31,11 +31,13 @@ export function About() {
               <CardTitle>Skills & Expertise</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              {skills.map((skill, index) => (
+              {skills?.map((skill) => (
                 <div key={skill.name} className="space-y-2">
                   <div className="flex justify-between text-sm">
                     <span className="font-medium flex items-center gap-2">
-                      <skill.icon className="w-4 h-4 text-primary" />
+                      {skill.category === "frontend" ? <Code className="w-4 h-4 text-primary" /> :
+                      skill.category === "backend" ? <Server className="w-4 h-4 text-primary" /> :
+                      skill.category === "ai" ? <Brain className="w-4 h-4 text-primary" /> : <Cloud className="w-4 h-4 text-primary" />}
                       {skill.name}
                     </span>
                     <span className="text-muted-foreground">{skill.level}%</span>

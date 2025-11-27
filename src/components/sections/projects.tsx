@@ -1,16 +1,15 @@
 "use client"
 
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { projects } from "@/lib/data"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { AnimatePresence, motion } from "framer-motion"
 import { ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
+import { useState } from "react"
 
-export function Projects() {
+export function Projects({ projects }: { projects: any}) {
   const [filter, setFilter] = useState<string>("all")
 
   const filteredProjects = projects.filter(
@@ -57,7 +56,16 @@ export function Projects() {
                   <div className="relative h-48 w-full bg-muted overflow-hidden">
                     {/* Placeholder for project image */}
                     <div className="absolute inset-0 flex items-center justify-center bg-slate-800 text-slate-600">
+                       {project.imageUrl ? (
+                          <Image
+                          src={project.imageUrl}
+                          alt={project.title}
+                          fill
+                          className="object-cover"
+                        />
+                       ) : (
                         <span className="text-4xl font-bold opacity-20">{project.title.charAt(0)}</span>
+                       )}
                     </div>
                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
                         <Button size="icon" variant="secondary" asChild>
@@ -80,7 +88,7 @@ export function Projects() {
                   <CardContent className="flex-grow">
                     <p className="text-sm text-muted-foreground mb-4">{project.description}</p>
                     <div className="flex flex-wrap gap-2">
-                      {project.techStack.map((tech) => (
+                      {project.techStack.map((tech: string) => (
                         <Badge key={tech} variant="secondary" className="text-xs">
                           {tech}
                         </Badge>

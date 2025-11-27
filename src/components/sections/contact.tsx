@@ -1,11 +1,11 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Github, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react"
+import { motion } from "framer-motion"
+import { Github, Linkedin, Mail, MapPin, MessageCircleMore, Phone, Send } from "lucide-react"
 
 export function Contact() {
   return (
@@ -38,8 +38,8 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-medium">Email</p>
-                    <a href="mailto:ejaz@example.com" className="text-muted-foreground hover:text-primary transition-colors">
-                      ejaz@example.com
+                    <a href="mailto:ejazhussain1050@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                      ejazhussain1050@gmail.com
                     </a>
                   </div>
                 </div>
@@ -49,8 +49,8 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-medium">Phone</p>
-                    <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                      +1 (234) 567-890
+                    <a href="tel:+923435311994" className="text-muted-foreground hover:text-primary transition-colors">
+                    +923435311994
                     </a>
                   </div>
                 </div>
@@ -60,19 +60,33 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-medium">Location</p>
-                    <p className="text-muted-foreground">San Francisco, CA</p>
+                    <p className="text-muted-foreground">Islamabad, Pakistan</p>
+                  </div>
+                </div>
+                 <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-full bg-primary/10 text-primary">
+                    <MessageCircleMore className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="font-medium">whatsapp</p>
+                    <p className="text-muted-foreground">+923435311994</p>
                   </div>
                 </div>
                 
                 <div className="pt-6 flex gap-4">
                     <Button variant="outline" size="icon" asChild>
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/ejaz-hussain-1050" target="_blank" rel="noopener noreferrer">
                             <Github className="w-5 h-5" />
                         </a>
                     </Button>
                     <Button variant="outline" size="icon" asChild>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/ejaz-hussain-799524173/" target="_blank" rel="noopener noreferrer">
                             <Linkedin className="w-5 h-5" />
+                        </a>
+                    </Button>
+                     <Button variant="outline" size="icon" asChild>
+                        <a href="https://www.upwork.com/freelancers/~01984b0ae3255e0867" target="_blank" rel="noopener noreferrer">
+                            <MessageCircleMore className="w-5 h-5" />
                         </a>
                     </Button>
                 </div>

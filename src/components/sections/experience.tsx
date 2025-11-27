@@ -1,12 +1,10 @@
 "use client"
 
+import { Card, CardContent } from "@/components/ui/card"
+import { Experience } from "@/lib/data"
 import { motion } from "framer-motion"
-import { experiences } from "@/lib/data"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import Image from "next/image"
 
-export function Experience() {
+export function Experiences({ experiences }: { experiences: Experience[] }) {
   return (
     <section id="experience" className="py-20 container mx-auto px-4 bg-slate-50/5 dark:bg-slate-900/50">
       <motion.div
