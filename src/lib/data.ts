@@ -1,4 +1,5 @@
 
+import portfolioData from "./../../data/portfolio-data.json";
 export interface Project {
   id: string;
   title: string;
@@ -7,7 +8,7 @@ export interface Project {
   liveUrl?: string;
   githubUrl?: string;
   imageUrl: string;
-  category: "web" | "mobile" | "ai" | "fullstack";
+  category: "web" | "mobile" | "ai" | "fullstack" |string;
 }
 
 export interface Experience {
@@ -23,8 +24,7 @@ export interface Experience {
 export interface Skill {
   name: string;
   level: number;
-  category: "frontend" | "backend" | "ai" | "tools";
-  icon?: any;
+  category: "frontend" | "backend" | "ai" | "tools"|string;
 }
 
 export interface Education {
@@ -47,11 +47,12 @@ export async function getPortfolioData() {
   }
 
   try {
-    const fs = await import('fs/promises');
-    const path = await import('path');
-    const dataPath = path.join(process.cwd(), "data", "portfolio-data.json");
-    const data = JSON.parse(await fs.readFile(dataPath, "utf-8"));    
-    return data;
+    // const fs = await import('fs/promises');
+    // const path = await import('path');
+    // const dataPath = path.join(process.cwd(), "data", "portfolio-data.json");
+    // const data = JSON.parse(await fs.readFile(dataPath, "utf-8"));    
+    // return data;
+    return portfolioData;
   } catch (error) {
     console.error("Failed to read portfolio data:", error);
     return {
